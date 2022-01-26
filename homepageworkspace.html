@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My first website</title> 
+		<link rel="stylesheet" type="text/css" href="styling.css">
+		<link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+		<link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Source+Code+Pro:wght@300;500;700&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Pushster&family=Source+Code+Pro:wght@300;500;700&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+		<style>
+			head{
+				color:brown;
+			}
+			body{
+				background-image: url("teal.png");
+				background-size: 780px;
+				font-family: 'Source Code Pro', monospace;
+				border-style: dashed;
+				border-left-color: green;
+				border-right-color: red;
+				border-top-color: blue;
+				border-bottom-color: brown;
+
+			} 
+			h1{
+				font-family: 'Luxurious Roman', cursive;
+			}
+			
+			.profile-picture{
+				border-radius: 5px /*converts the rectangular form into cirular form*/ 
+					
+			}
+			.profile-picture:hover{
+				border-radius: 50%;
+				border-color: blue;
+				border: auto auto auto auto;
+				overflow: hidden;
+				box-shadow: 0px 0px 20px black;
+			}
+			.quote{
+				border-radius: 5px;
+				border-color: red;
+				border-width: 5px;
+				border:auto auto auto auto;
+				border-style: solid;
+				padding:auto; 
+
+			}
+			#not-good{
+				background-color: orange;
+
+			}
+			.subheading{
+				display:inline-grid; 
+				align-items: right;
+				grid-template-columns:35px 35px 35px; 
+				grid-template-rows: 50px; 
+				grid-gap: 10px;
+				background-color: #008080
+			}
+
+			.blog-name{
+				text-align: center;
+				border-style: dotted;
+
+			}
+		</style>
+	</head> 
+	<body>
+		<div class='blog-name'>
+			<h1>Geeky Noobs </h1> 
+			
+				<p class='subheading'>Home</p> 
+				<p class='subheading'>Contact Me</p> 
+				<p class='subheading'>Educational credentials</p> 
+			
+		</div>
+		<hr>
+		<h2 class="start">This is less of a website blog and more of a motivation pill..cheriossss!! <!--headings are supposed to be in bold-->
+
+		</h2>
+
+		<img class='quote' src="https://theworldseesnormal.com/wp-content/uploads/2018/10/img_8941.jpg" alt='Motivational quote' width='200' height='200'>
+		<!-- /** a particular block of code**\ -->
+		<div> 
+			<p> Hi My name is <strong id='my-name'>Dhriti</strong> I am one of those peeps who hated coding initially and only knew how to print hello world in python(Before I joined college)
+			</p>
+			<hr>
+			<div class='profile-picture-wrapper'>
+				<img class="profile-picture" src='/Users/Dhriti/Desktop/VIT/ID PHOTO.png' alt="author's photo" width='200' height="200"/>
+				<h4>AUTHOR'S PHOTO</h4> 
+			</div>
+			
+			<p>Unbelievable right? So what you can never be worse off than me if not better!!</p>
+		</div>
+		<div> 
+
+			<p>ok!! so before we proceed pls tell where you see yourself standing in the tech field </p>
+			<select> 
+				<option class="option">Noob pro max(just started out dude!!)</option>
+				<option class="option">Beginner(Started few weeks ago,so yeah..)</option>
+				<option class="option">Mid(Somewhere between medium and a professional)</option>
+				<option class="option">professinal(Oh yeah,been working in the tech industry for a while now)</option>
+			</select> 
+			<p>COOL!!So now,are you ready to take the plunge and detoxify yourself from all the stress you have been facing for so long?!</p>
+			<button>Yeah!Count me in please!!</button>
+			<button id='not-good'>Umm..not sure,please take me back</button>
+		</div>
+
+		
+
+		<textarea rows="5" cols="10">Hi!Feel Free to vent out all your stress and anxiety issues here</textarea>
+		<span>Feel free to puke whatever you want to as long as it's not toxic!!
+		</span> <!-- two seperate information stored in two different blocks we need to print them together in one line,hence we put it under the span attribute and not the div one -->
+		<span>and trust me,noone would snitch lol ; )
+		</span> 
+
+        <div>
+
+			<p>Well!!!lemme guess!most of you must be finding the following problems in common</p> 
+		</div> 
+		<div> 
+			<h3 class='reason'>reasons of feeling overwhelmed</h3>
+
+			<ul class='table-grid'> <li>I am feeling overwhelmed!</li>
+
+				<li>I am feeling stressed out!!</li>
+
+				<li>My whole life is fucked up dude</li>
+
+				<li>Idk what's happenning half of the time</li>
+			</ul>
+		</div>
+		<div>
+			<p>All our concerns can be put into several boxes along with their solutions(which random people provide)</p>
+		</div>
+		<div class='reason-grid'>
+			<div>Lack of time</div>
+			<div>Procastination</div> 
+			<div>Not getting desired results!!</div> 
+			<div id='solution-1'>The picture was never as rosy at it seemed,you need to sweat it out and devote time to it</div> 
+			<div id='solution-2'>Well,most people procastinate..if you get stuck om what most people do,you wont find time</div> 
+			<div id='solution-3'>well,FYI Rome wasn't build in one day</div> 
+		</div>
+
+		<div> <p>Well Well Well... we all know this for a fact that..</p>
+			  <a href="https://google.com">We call him our saviour!!</a> 
+		</div>
+
+		<!--<ol> <l> It's totally fine just chill out there buddy,I am there with you</l>
+			 <l> It's totally fine just chill out there buddy,I am there with you</l>
+			 <l> It's totally fine just chill out there buddy,I am there with you</l>
+		</ol>-->
+	</body> 
+</html> 
+

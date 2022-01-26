@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8"> <!--gives information about the website/blog-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>css flexbox</title>
+	<style>
+		.container{
+			border-style: solid; 
+			height: 500px;
+			width: 100%; 
+			border-color:black;
+			display: flex; /*the overall page container where the content is wrapped,this is where we need to initialise flexbox,cascading exists*/
+			flex-direction: row; /*contents gets displayed in one line with the last container as first,for row, the content is displayed side by side,row-reverse-->rows get reversed,default flex direction is row*/
+			flex-wrap: wrap-reverse; /*it became mobile responsive and the boxes fit themselves according to the screen,default is nowrap(not responsive),in wrap-reverse: the elements/boxes shift downwards and fill the spaces from downwards to upwards*/
+			/*shortcut for flex-wrap and flex-direction,is flex-flow where we can specify both*/
+			flex-flow: row wrap;
+			justify-content: center; /*justifies the content to the centre of the flexbox*/
+			/*justify-content: space-around; /*equal spaces between left and right of the content box,since two boxes have a common area,they would have double the space*/
+			justify-content: space-between; /*space created btween th eboxes but first and last boxes are shifted to the edges,can also use flex-end and flex-start for right an left shifting respectively*/
+			align-items: center; /*vertically center,flex-end and flex-start align the itmes to the bottom and top of the flexbox accordingly,flex-streatch creates the an even below line stretch*/
+
+
+		} 
+		.item{
+
+			
+			background-color: red;
+			padding: 1rem; 
+			border:2px solid green;
+			width: 100px; 
+			margin: 10px;
+			height: 100px; 
+
+			/*flex properties*/ 
+			
+
+		}
+		#box1{
+			flex-grow: 2; /*the first box grows the most if given the chance,can use it in navbar*/
+			 /*sets the order of appearence of th elments*/ 
+			align-self: flex-end; /*aligns the div element towards the end of the flex container*/
+		}
+		#box2{
+		  
+			 /*the second box(with the id) would shrink if given the chance,negative values are invalid*/
+			flex-shrink: 3; 
+			flex-basis: 40px; /*if we have set the flex direction to row,then flex basis sets the row height,if we have set the se th edirection to column,it decised the column height*/ 
+			
+			align-self: center;/* aligns a single elemnt towards the center of the flexbox containber(portion where we set the container display to flex)*/
+		}
+		#box3{
+			align-self: flex-start; /*aligns the div element with the id box3 towards the start of the flex-box container*/
+		}
+	</style>
+</head>
+<body> 
+	<div class='container'>
+		<div class='item' id ='box1'>BOX 1</div>
+		<div class='item' id ='box2'>BOX 2</div>
+		<div class='item' id ='box3'>BOX 3</div>
+		<div class='item' id ='box4'>BOX 4</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning css grid</title> 
+	<style type="text/css">
+		.navbar:{
+			display:flex;
+		}
+		
+		.container{
+			background-color: red;/*for amything to appear it is mandatory to define its width and height*/
+			height:80px; 
+			width:100vw;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr; /*fr means one part of avaible space,theree fr means i am spilltimg into three rows to fillm up the whole container*/ 
+			grid-template-rows:2vh 1fr; 
+			grid-row-gap: 5vw;
+			grid-column-gap: 5vw;/*incase we dont use the fr units,make sure to specify grid column and row gaps else they will be jammed together;*/ 
+
+			
+
+		}
+		.items{
+			background-color: blue;
+			height: 2rem;
+			padding-left:1rem;
+
+
+
+		}
+		#item1{
+			grid-column: 1 / span 5;
+
+		} 
+		.container1{
+			background-color: red;/*for amything to appear it is mandatory to define its width and height*/
+			margin-top:10px;
+			height:26rem; 
+			width:100vw;
+			display: grid;
+			grid-template-columns: 0.5fr 2fr 0.5fr; /*fr means one part of avaible space,theree fr means i am spilltimg into three rows to fillm up the whole container*/ 
+			grid-template-rows:1fr; 
+			
+			grid-column-gap: 5px;/*incase we dont use the fr units,make sure to specify grid column and row gaps else they will be jammed together;*/ 
+			margin-right: 4px;
+
+			
+
+		}
+		.items1{
+			background-color: blue;
+			height: 25rem;
+			padding-left:1rem;
+
+
+
+		}
+		.container2{
+			margin-top: 10px;
+			background-color: red;/*for amything to appear it is mandatory to define its width and height*/
+			height:80px; 
+			width:100vw;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr; /*fr means one part of avaible space,theree fr means i am spilltimg into three rows to fillm up the whole container*/ 
+			grid-template-rows:2vh 1fr; 
+			grid-row-gap: 5vw;
+			grid-column-gap: 5vw;/*incase we dont use the fr units,make sure to specify grid column and row gaps else they will be jammed together;*/ 
+
+			
+
+		}
+		.items2{
+			background-color: blue;
+			height: 2rem;
+			padding-left:1rem;
+
+
+
+		}
+		#item12{
+			grid-column: 1 / span 5;
+} 
+		
+		
+	</style>
+
+</head>
+<body>
+	<div class="navbar">
+		<div class='container'>
+			<div class='items' id='item1'>This will be my navbar</div>
+			<div class='items'>Heading 1</div>
+			<div class='items'>Heading 2</div>
+			<div class='items'>Heading 3</div>
+			<div class='items'>Heading 4</div>
+		</div> 
+    <div class="body">
+		<div class='container1'>
+			<div class='items1' id='item11'>This will be my side tab section</div>
+			<div class='items1'>This will be my main content section</div>
+			<div class='items1'>I can include google ads in this one or to prevent overflows</div>	
+		</div> 
+	<div class="footer">
+		<div class='container2'>
+			<div class='items2' id='item12'>This will be my footer</div>
+			<div class='items2'>Heading 1</div>
+			<div class='items2'>Heading 2</div>
+			<div class='items2'>Heading 3</div>
+			<div class='items2'>Heading 4</div>
+		</div> 
+   </div>
+
+
+
+
+</body>
+</html>

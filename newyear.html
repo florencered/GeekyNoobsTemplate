@@ -1,0 +1,408 @@
+<!DOCTYPE html> <!--doctype,head,html,body have the same indentation-->
+<html> <!--these are called tags-->
+<head> <!--contains title,meta tags,links to the used fonts(link tag)-->
+	<meta charset="UTF-8"> <!--gives information about the website/blog-->
+	<meta name="blog" content="new year blog"> <!--meta is a tag since it has an opening and an ending tag and name,content and the sections enclosed within the tags are called attributes meanwhile html/css elements are supposed to hol content,eg:header elemnt,footer elemnent,etc-->
+	<meta name="owned by" content="Geeky Noobs"> 
+	<meta name="keywords" content="HTML, CSS,New year,resolutions,blog">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>New Year Blog</title>
+	<link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Comforter+Brush&family=Courgette&family=Luxurious+Roman&family=Open+Sans+Condensed:wght@300&family=Oswald&family=Source+Code+Pro:wght@300;500;700&family=The+Nautigal:wght@700&family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet"> <!--link tag is a self closing tag,link tags are used when we need to use some resources in OUR OWN HTML/CSS document,anchor tag just takes us to referred webpage-->
+	<style type="text/css"> /*started writing css using the style tag,notice that the method to comment piece of info changes*/
+		body{
+			background-image: url("teal.PNG"); /*sets the background image of the whole body*/
+			border-radius: 50px; /*brings curves round the borders,50% is used to make circles*/
+			border-style: double; /*style of the border at the sides,other options include-->dotted,solid,double,dashed*/
+			display: flex;
+			flex-wrap: wrap;
+			
+
+		} 
+		.header{ /*class is header*/
+			
+			border-radius: 50px; /*radius of the border should have a curved radius at the edges*/
+			position: relative; /*all the positions are relative to the viewport*/
+			top: 0px; /*position of the header content wrt top of the  should be zero,will have a margin tho*/
+			bottom:10px; /*10px from the bottom*/
+			height: 40vh; /*rem(relative to html root element which is the starting html tag-->);vh(relative to the viewport height)
+			background-color: #E30B5C; /*colour of the backgriund of the headre section*/
+			color: #2A416F; /*color of the font/text*/
+			font-size: 70px;
+			font-family: 'Oswald', sans-serif;
+			padding-right: 45vw;/*right-area surounding the text*/
+			padding-left: 3vw; /*left-area surounding the text*/
+			margin-top: 2vh; /*area surrounding the content,whole body,haeder in this case*/
+			display: flex;
+			flex-flow: row wrap;
+		}
+		
+		.Subheading{
+			display: flex; /*elements get displayed side by side*/
+			width: 200px;
+			border-radius: 50px;
+			grid-template-columns: 20px 40px 40px 20px;
+			grid-template-rows: 40px;
+			background-color: #008080; 
+			color: black;
+			padding-top: 3vh;
+			padding-bottom: 1px;
+			padding-left: 15px; /*text enclosed with the margin,also the text enclosed within the box surrounding it*/
+			margin-bottom: 2vh; /*margin of the view port*/ 
+			
+			
+		}
+		
+
+			 
+			
+
+		}
+		.pagecontainer{ /*using classes*/
+			position: relative; /*move an elemnt wrt its original positon,when you wan tot change the positon of only one part fixed-->the content would not move even if we scroll down the page,would always be at the top of our viewport,absolute-->the content would remain where it is if we scroll down,in the begenning it is centered plowrewr behaves as ab absolute tag,once it moves up,it behaves as a fixed element*/
+			min-height: 100vh;
+		}
+		.content-wrap{ 
+			padding-bottom: 150px;
+		}
+
+
+		}
+		.photo{
+			float: center; /*we can float elements,image/text//left right amnd center*/
+			border-radius: 50px;
+			width:30vw; /*side ways length*/
+
+		  }
+		#new-year-photo{
+
+			overflow: hidden; /*text/anylelement would hifde itself if it goes out of the padding-box,types of overflow:visible,text would be visible even if it goes outside the padding,scroll-->would add a scroll aand limit the content to the,auto:if content goes out of the padding,use scroll*/
+			box-shadow: 0px 0px 20px black; /*2coordinates define solid shadow(x,y) and 3 coordinates give it a blurred effect defining the z-axis,1 means infront of it,z-index only works on flex and positioned elements*/
+			width:40vw; 
+			margin-left: 20vw;
+			/*search about z-index,z-index of -1 places the element behind the text */
+
+		}
+		#author_photo{
+			display: block; /*display it in block form*/
+			border-radius: 50%;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: auto;
+			margin-bottom: auto;
+			width:20%; /*20% of the viewport*/
+		}
+		#author_photo:hover{
+			display: block; /*every next element like p tags are considreed as blocks and displayed in next line,inline: all the blocks,tags are shown line wise/side by side,inline-bock-->; we get a block spacing after each line,each element*/
+			border-radius: 50%;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: auto;
+			margin-bottom: auto;
+			width:20%;
+			overflow: hidden; /*only that much content would be shown which could be enclosed within an image/box*/
+			box-shadow: 0px 0px 20px black; 
+		} 
+		.coding-languages{
+			font-size: large;
+			font-family: 'Alegreya', serif;
+		}
+		.my-experience{
+			font-size: large;
+			font-family: 'Alegreya', serif;
+		}
+		}
+		.resources{
+			font-size: 14px;
+			font-family: 'Alegreya', serif;
+		} 
+		.resources:hover{ /*if we are taking our pointer beside it,the efffect would come into place*/
+			font-size: 20px;
+
+		}
+
+		
+		h1 {
+			
+  		   font-size: 80px;
+  		   font-family: 'Yanone Kaffeesatz', sans-serif;
+  		   animation-name: colorful; /*provided a random animation name whhich would be later used in the keyframes rule*/
+  		   animation-duration: 2s; /*the duration of the animation*/
+  		   animation-iteration-count: infinite; /*the no of times(in sec) we want the animation to be repeated*/
+			}
+		@keyframes colorful{ /* keyframes rule defines whatr we want to happen in the animation we defined,it is colourful in this case*/
+			0%{ /*begenning of the animation*/
+				text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+
+			}
+			100%{ /*eneding of the animation,we can also define other timings by x%*/
+				color: black;
+			}	
+		/*in this keyframes rule,I defined that animaytion name colorful should have text shadow at the begenning if the animation and should have black colour at the ending o the animation*/
+
+		}
+		p{
+			font-size: large;
+			font-family: 'Alegreya', serif;
+		} 
+		h2,h3{
+			
+			font-family: 'Yanone Kaffeesatz', sans-serif;
+
+		}
+		#info{
+
+			animation-name: big; /*name of the animation is big*/
+			animation-duration: 2s;/*animation effect should be for 2 min*/ 
+			animation-iteration-count: infinite; /*animation should be repeated for infinte time*/
+		}
+		@keyframes big{
+			0%{
+				color: blue;
+			}
+			100% {
+				color: black;
+			}
+		/*the big animation,should display the content in blue colour at the begenning and display black colour towards the end*/
+		}
+		.to-ace-coding{
+			font-size: x-large;
+			font-family: 'Alegreya', serif;
+		} 
+		.author-info{
+			font-family: 'Courgette', cursive;
+		}
+		.media-paltforms{
+			
+			border-radius: 90px;
+			width:50px; 
+			
+		}
+		.media-paltforms:hover{
+			overflow: hidden;
+			box-shadow: 0px 0px 20px black; /*px is a absolute unit,points too 1px==72 pts,em and % are not 2 em means 2 times larger than the fobt size declared forst in the body element and 2% means fobt size would be 2% of the font size declared in the body elemnt,em and % are cascading,rem:relative to the font-size of the rem elemnt which is the html element;SPAN TAG-used to mark a particular text,used within the html itself*/
+			width: 20px;
+			height: 20px; 
+			transition: width 1s, height 1s; /*changes in appearence*/
+			opacity: 0.7; /*tells us how much dense the element is,range-->0 to 1*/ 
+			font-weight: bold;/*tell sthe thickness of the text,only 4 are allowed-->bold(700)/normal(400)/thin(100)/heavy(900);other than that would be set to defaalt font-weight(regular)*/
+		}
+
+		
+		#submit-button{
+			background-color: orange;
+		}
+		.footer{
+			position: absolute; 
+			border-radius: 20px;
+			bottom:200; 
+			width: 98%;
+			height: 150px;
+			margin-left: 0px;
+			padding-bottom: 5px;
+			padding-right: 3px;
+			padding-left: 5px;
+			
+			background-color: #E30B5C;
+			color: #2A416F;
+			font-size: 50px;
+			font-family: 'Oswald', sans-serif;
+		}
+		#copyright{
+			font-size: 15px;
+		}
+	</style>
+</head> <!--all css commands to be enclosed in the style tag which should be further enclosed inside the body tag-->
+<body>
+	<div class='page-container'> <!--includes the whole page including the footer-->
+   		<div class="content-wrap"> <!--includes all the content within the page except the footer-- <!--The header elem-->
+			<header class="header"> <!--these headre,footer elements are used intead of div so that we can easily access them,called semantics(logical div tags)-->
+				<h1 id="heading"><u>Geeky Noobs</u></h1> <!--The header a good practice to start from h1,in terms of relative sizing,this should be having the biggest font-size-->
+					<p class='Subheading'><b><em>Home</em></b></p> 
+					<p class='Subheading'><b><em>Educational</em></b></p> <!--em tag is for italics,u for underline and b for bold-->
+					<p class='Subheading'><b><em>Doubts</em></b></p>
+					<p class='Subheading' id='more'><b><em>More</em></b></p> <!--id is unique and class can be used to denote a group of paragraphs-->
+			</header>
+
+		    <div>
+				<h1 align="center">Happy New Year fellow Geeksters!!</h1><!--will contain the same font size as the h1 tag used before.align="" is used to align the font to left,right,center,justify-->
+			</div>
+			<figure class="photo"><!--use the figure tag insted of div when there are some pictorial representations or figures like charts,graphs,images-->
+				<img id="new-year-photo" src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/09/nepal-new-year-cover-400x267.jpg" alt="photo"><!--img is a self closing tag containing attributes such as id(unique for each),src(link of the source of the image),alt(alternative text that would show up if the image is not displayed),class-->
+			</figure>
+			<div> <!--one part of the content containing written info and relaed puvture grouped into ine thing-->
+				<article> <!--article tag shows an independent content-->
+					<p>Hope this blog finds you in the best of your spirits!!! Well..If not I am here to fix and mend things out for you :)I may not be able to fix your computer bugs but trust me I might fix your heart..Just close your eyes and calm down.It's Alright...</p> 
+				</article>
+				<figure class="photo"><!--encountered another graphic rep,again a figure tag-->
+					<img src="https://image.shutterstock.com/z/stock-vector-vector-illustration-cartoon-cute-girl-programmer-coder-developer-designer-hand-drawn-web-coder-1760755694.jpg" alt="stock photo" width="400" height="210"> 
+				</figure>
+			</div>
+			<div>
+				<h2>Let's talk it out!!</h2> <!--font-size of this headre tag would be lesser than the h1 tag-->
+				<p>Okie geeksters ..A nice,friendly yet daunting question..so how much did you achieve the previous year????</p>	<!--paragraph tag-->
+				<form> <!--we use this tag when we want the user to fill something out like radiobuttons,checkboxes,fillups,drop-down menus-->
+					<select> <!-- a drop down menu,using select tag where we have to"select" an option-->
+						<option>Never stopped learning,learnt way more than I thought I could</option> <!--various options to choose from-->
+						<option>Kept on learning but came back to 0 when tried to solve these challenges</option>
+						<option>Well,Umm,Could barely scratch the surface</option>
+						<option>Oops!!My reason is not asked(unique one hehe)</option> 
+					</select>
+				</form> 
+			</div>
+			<form class="coding-languages">
+				<p>What is/are the front-end language(s) you wish to takeup this year?</p><!--checkboxes,can select multiplke options at a time-->
+					<label for="HTML/CSS"><input type="checkbox" name="language">HTML/CSS</label>
+					<label for="JAVASCRIPT"><input type="checkbox" name="language">JAVASCRIPT</label>
+					<label for="BOOTSTRAP"><input type ="checkbox" name="language">BOOTSTRAP</label>
+					<label for="WORDPRESS"><input type ="checkbox" name="language">WORDPRESS</label>
+					<label for="OTHERS"><input type ="checkbox" name="language">OTHERS</label><!--label for="what the checkbox has",ATTRIBUTES OF INPUT TAG type="checkbox/radio,name=what the options are about?their father-->
+			</form>
+			<div >
+				<p>Well for me ,in terms of programming and coding,.I learnt a tonne of things in...Lemme  it put up for you</p>
+				<ul class="my-experience"><!--unoredred list,bulletins would be added beside,can also define type of bulletins -->
+					<li>got to know that pyhton ios much more than print("Hello world")</li><!--elements of ul-->
+					<li>realised that python is not the only programming language</li>
+					<li>Realised that half of the population was already well versed with HTML,CSS,JAVA,PYTHON,CPP(oh gosh the list never ends..)</li>
+					<li>Became overwhelmed and depressed as a result(BUT..Started liking coding instead of hating it..)</li>
+					<li>Messed up my routine real bad</li>
+					<li>Tried juggling Assignments and coding simultaneously(FAILED!!)</li>
+					<li>Made unsuccessful attempts of scoring good marks in college exams</li> 
+					<li>Realised that I have to become a self-learn web developer</li>
+				</ul>
+			</div>
+
+			<div>
+    			<p> So yeah,I successfully fucked up a lotta things.BUT...... I SURVIVED.....and I feel HAPPY about it,so should anyone who just started their coding journey..NOPZ..that doenst mean we are getting complacent.NOT.AT.ALL</p>
+    			<figure class="photo">
+    				<img src="https://en.pimg.jp/064/567/480/1/64567480.jpg" alt="image" > <!--we vacan define the height and width of the image within html only-->
+    			</figure>
+    			<article>
+    				<p>We can't learn how to code decently in a single month,let alone a single week or a single....This is what makes coding soo damm interesting and mysterious at the same time.Gosh!!..ya can't get to know this guy sooo fuckin easily!! If we wanna be coding-pro,we need to embrace ourselves to fall an infinite times and  put our ass back on track an infinite times.(Warning ya already!!)	</p> 
+        		</article>
+    		</div>
+    		<div >
+    			<h3>Factors which can help us become a good programmer faster</h3><!--font size should be same as the previous h2 tag-->
+    				<figure class="photo">
+    					<img src="https://media.gcflearnfree.org/content/5e31ca08bc7eff08e4063776_01_29_2020/ProgrammingIllustration.png" alt="image"  >
+    				</figure>
+    		</div>
+    		<article><!--section element-->
+    			<ol type="i" class="to-ace-coding"> <!--numbered lit,tyoe->roman num-->
+    				<li> Let's just mind our own business</li>
+    					<section>
+    						<figure class="photo">
+    							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4tnn3OjcKPH6AdbhXZA24KOcMC9Ik6Sqg5Q&usqp=CAU" alt="image"  > <!--height,width defined-->
+    						</figure>
+    						<p>Yes this might be a little blunt but that's what most of us need to do.We need to mind our own business and not worry about how well others are doing,what they are doing,when they are doing etc,etc.I committed this mistake and sufferred a hell lot.I couldnt code code properly beacause I became anxious and overwhelmed(the pro max level)and which pulled me into this deep pit of self-doubt instead of pushing me foward.So yeah,lesson no 1.Accept the fact that others might be ahead of you,throw the fact into dustbin and start coding at your own pace.</p> 
+    					</section>
+    				<li>Accept the fact that some people are naturally good at coding</li>
+    					<section>
+    						<figure class="photo">
+    							<img src="https://static.scientificamerican.com/sciam/cache/file/F4FFDF28-F50F-4DF3-A864831C8A4D1B35_source.jpg" alt="image" >
+    						</figure>
+    			 			<p> Yep,some people have that innate talent of grasping that syntax really fast or applying that knowledge correctly  wihtin minutes of knowing it.Let's just accept that fact and not beat ourseleves up for getting stuck at the first question itself while Tom is busy playing badminton since he completed the whole assignment in no time.(But if Tom gets too complacent and doesnt practice the bare minimum,he is surely gonna lose the coding game.Hehehe)Strange.. is'nt it?All we mere mortals can do(me atleast) is learn,practice,apply and repeat a thousand times and beat </p> 
+    			 		</section>
+    				<li>Practice makes a man perfect</li>
+    					<section>
+    						<figure class="photo"> 
+    							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKKvnoOvapFW2hfzuT4VmqDoCoA7BspGfpIFImR5UboUKBinBVyznRKfzA4-933exB3xI&usqp=CAU" alt="image" > 
+    						</figure>
+    						<p>As a rule of thumb,we need to get this thing in our heads that practicing thousands of challenges,putting long long hours of effort are a necessity for execelling in this field.If you are tired attempting those same challenges every day,make mini beginnerprojects,tired again?listen to podcasts and hunt up you-tube to learn new coding related things.Coding just like any other skill needs time,patience and perserverance... </p>
+    					</section>
+    				<li>Fall in love with coding</li>
+    					<section>
+    						<figure class="photo">
+    							<img src="https://miro.medium.com/max/596/1*UWwXVMSC7sDxG5wgclYy3A.png" alt="image" width="400" height="210">
+    						</figure>
+                			<p>Well now you might be thinking..wait what,tis girl said she hated coding,she be tripping or wat dude??Well,yes you are right(except the tripping part).Before entering college I hated coding,I would do anything to not code.But umm..when I actually kinda started coding and familiarising myself with the concepts,I kinda started liking it.That's probably the reason I survived 2021 despite the fact that I was noob pro max.I just got up again..why? Because I kinda liked getting up to see what's next.Coding is a labour of love,you need to devote your time and lend it your love else the motivation to stay put and keep working would die after some time(Wopzie..) </p> 
+                		</section>
+    				<li>Gathering the right resources</li> 
+    					<section>
+    						<figure class="photo">
+    							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD84EeZjxwXBY1wF3HXoLLFUYsZCdRl5blA2ZATUfsTIcQmiU1HpBuv-68GZjBqyvOFcU&usqp=CAU" alt="image">
+    						</figure>
+    						<p>Half of the time I was busy searching dependable and reliable sources to learn and practice coding.If you feel guilty for the same thing,allow me to ease your trouble a bit by providing you some useful links to be a self-taught coder without any money..</p>  
+    						<ul> <!--unordered list,bulletin type,WRAPPING all the list inside the other-->
+    							<li>For learning stuff</li>
+    								<ol type="1" class="resources"> <!--ordered list,1,2,3,4type numbering-->
+    									<nav> <!--nav tag tells the net to tell the users that these are the links-->
+    						 				<li> <a href="https://www.w3schools.com">W3 TUTORIALS</a> </li>
+    						 				<li><a href="https://www.geeksforgeeks.org">GEEKS FOR GEEKS</a></li> 
+    						 				<li><a href="https://www.codewithharry.com">CODE WITH HARRY</a></li>
+    						 				<li><a href="https://youtu.be/8cm1x4bC610">NAVEEN REDDY(TELUSCO)VIDEOS</a></li>
+    						 			</nav>
+    								</ol>
+    							<li>Free courses</li> 
+    								<ol class="resources">
+    									<nav> <!--anchor tag is used to enclose link in the href attribute--href="#" for dead link-->
+    										<li><a href="https://www.freecodecamp.org">FREE CODECAMP</a></li> 
+    										<li><a href="https://careerfoundry.com">CAREER FOUNDRY</a></li> 
+    										<li><a href="https://www.udacity.com">FREE COURSES ON UDACITY</a></li>
+    										<li><a href="#">DEAD LINK</a></li>
+    									</nav>
+    								</ol> 
+    							<li>Practicing challenges/Competitive programming</li>
+    								<ol class="resources">
+    									<nav>
+    										<li><a href="https://leetcode.com">LEETCODE</a></li>
+	    									<li><a href="https://www.hackerrank.com">HACKERRANK</a></li>
+	    									<li><a href="https://www.codechef.com/">CODECHEF</a> </li>
+	    									<li><a href="https://www.codewars.com/">CODEWARS</a></li> 
+    									</nav>
+    								</ol> 
+    						</ul> 
+    				   </section> 
+    			</ol>
+    		</article>    		
+    		<article>
+    			<h2>About the author</h2> <!--second largest relative font-size-->
+    			<figure>
+    				<img src="profile.png" alt="author's photo" width="210" height="210"  class="photo" id="author_photo">
+    			</figure>
+    			<p class="author-info">Hey guys I am Florence Red,a CS undergrad studying in VIT,India.Just entered into the tech field a couple of months ago.Initially,during my school years I had an aversion towards coding,used to hate it like anything.I decided to venture into the tech field merely beacuse I wanted a fat salary.(Still on the lookout for the person who said this perfectly crafted lie,big F).3 months back(When I had just entered college).I only knew that python was both a coding language and a type of snake.Yep,you can laugh as much as you want!!!)Fast foward 3 months,I learnt a little more than that and most importantly started liking to code rather than coding just for the sake of landing a job :).So,if me..a helpless and hopeless chap could survive the peer pressure and all other hurdles for 3 months,you can too..trust me you can.!!</p>
+    			<p class="author-info">okie!!So meet you in the next blog!!!Byeee fellas!!!</p> 
+    		</article>   
+    		<form class="author-info"><!--when we require user input-->
+    			<p class="author-info">Did you find the blog helpful?</p>
+    			<fieldset> <!--for radiobuttons-->
+     				<label for="yes"><input id="yes" type="radio" name="confirmation">Yes,Did help me out</label>
+     				<label for="No"><input type="radio" id="no"  name="confirmation">No,it sucked!!</label>
+     			</fieldset>
+     		</form>
+     		<form>
+     			<p class="author-info">Feel free to add your valuable and constructive suggestions here :)</p>
+     			<textarea>Add suggestions</textarea> 
+     		</form>
+     		<form>
+     			<p class="author-info">Please enter your email ID to recieve daily updates</p> 
+     				<input type="text" placeholder="Enter your email"required="Uh!!!seems like you missed it,pls fil this up!">
+     				<button type="submit" id="submit-button">Submit</button> 
+     		</form>
+     		<form>
+     			<p>Pls enter your birth date!!</p>
+     			<input type="date" placeholder="Enter your birth date" required>
+     			<button type="submit">Submit</button> 
+            </form>
+  		</div> 
+     	<footer class='footer' >
+     		<p id='info'><strong>Connect with me on:</strong></p>      
+     			<a href="https://github.com"><!--the link is overshadowed by the icon-->
+     				<img class="media-paltforms" src="github.png" height="40" width="30">
+     			</a>     
+     			<a  href="https://www.linkedin.com/in/dhriti-dey-0616b5220">
+     				<img  class="media-paltforms" src="linkedin.png" height="40" width="30">
+     			</a>
+     	     	<a  href="https://www.reddit.com/">
+     				<img class="media-paltforms" src="reddit.png" height="40" width="30">
+     			</a> 	
+     		<div id='copyright'>&copy; 2021 geekynoobspvt.ltd</div> 
+     	</footer>  
+    </div>    
+</body>
+</html>
+
+     
+
+
+
+

@@ -1,0 +1,54 @@
+
+p{
+	font-style:italic;
+} 
+.start{
+	color:green;
+}
+.option{
+	color:orange;
+}
+#my-name{
+	color:brown;
+	font-family: 'Pushster', cursive;
+	font-size: 20px;
+
+	
+} 
+#not-good{
+	color:red;
+} 
+.reason-grid{
+	display:inline-grid; 
+	grid-template-rows: auto auto auto;
+	grid-template-columns: auto auto auto;
+	color: brown;
+	font-size: 30px;
+
+}
+#solution-1{
+	color:blue;
+	font-size: 20px;
+}
+#solution-2{
+	color:green;
+	font-size: 20px;
+} 
+#solution-3{
+	color:violet;
+	font-size: 20px;
+
+
+@media(max-width: 480px){
+	.grid-table{
+		display: grid 
+		background-color:violet;
+	}
+}
+
+}
+.reason{
+	font-style: bold;
+	color:red;
+} 
+
